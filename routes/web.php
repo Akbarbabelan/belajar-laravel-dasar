@@ -26,3 +26,13 @@ Route::redirect('/youtobe', '/pzn');
 Route::fallback(function (){
     return "404 by Programmer Zaman Now";
 });
+
+Route::view('/hello', 'hello', ['name' => 'Akbar']); //sama yang dibawah
+
+Route::get('/hello-again', function (){
+    return view('hello', ['name' => 'Akbar']);
+});
+
+Route::get('/hello-world', function (){
+    return view('hello.world', ['name' => 'Akbar']);
+});
