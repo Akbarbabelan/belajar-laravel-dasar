@@ -141,3 +141,5 @@ Route::post('/form', [\App\Http\Controllers\FormController::class, 'submitForm']
 Route::get('/url/current', function (){
     return \illuminate\Support\Facades\URL::full();
 });
+
+Route::get('/session/create', [\App\Http\Controllers\SessionController::class, 'createSession']);
