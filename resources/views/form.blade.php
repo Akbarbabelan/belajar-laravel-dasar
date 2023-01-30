@@ -3,7 +3,7 @@
         <title>Say Hello</title>
     </head>
         <body>     
-            <form action="/from" method="post">
+            <form action="/form" method="post">
                 <label for="name">
                     <input type="text" name="name">
                 </label>

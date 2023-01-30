@@ -152,3 +152,15 @@ Route::get('/error/manual', function (){
     report(new Exception("Sample Error"));
     return "OK";
 });
+
+Route::get('/error/validation', function (){
+    throw new \App\Exceptions\ValidationException("Validation Error");
+});
+
+Route::get('/abort/400', function (){
+    abort(400, "Ups Validation Error");
+});
+
+Route::get('/abort/401', function (){
+    abort(401);
+});
