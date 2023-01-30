@@ -143,3 +143,12 @@ Route::get('/url/current', function (){
 });
 
 Route::get('/session/create', [\App\Http\Controllers\SessionController::class, 'createSession']);
+
+Route::get('/error/sample', function(){
+    throw new Exception("Sample Error");
+});
+
+Route::get('/error/manual', function (){
+    report(new Exception("Sample Error"));
+    return "OK";
+});
